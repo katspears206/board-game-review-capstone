@@ -1,0 +1,20 @@
+<div>
+	<h2>Search our boardgames!</h2>
+	<input type="text" placeholder="Search" ng-model="searchstring">
+	<button ng-click="searchGames()">Go!</button>
+
+	<section ng-repeat="game in foundGames">
+		<image>{{ game.image }}</image>
+		<h3>Name: {{ game.name }}</h3>
+		<h4>Description: {{ game.description }}</h4>
+		<h4>Number of players:{{ game.players }}</h4>
+		<button ng-click="showEditGame(game)">Edit Game</button>
+		<div ng-if="editGameVisible===true">
+			<div ng-include="partials/editgame.html"></div>
+		</div>
+		<button ng-click="deleteGame(game)">Delete Game</button>
+		<textarea ng-model="game.review"></textarea>
+		<div ng-include="'partials/addReviewBtn.html'"></div>
+		<section ng-repeat="review in game.reviews">{{review}}</section>
+	</section>
+</div>

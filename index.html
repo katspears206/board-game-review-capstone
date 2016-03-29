@@ -8,6 +8,13 @@
 
 	<nav>
 		<h1>Board Game Review</h1>
+
+		<ul>
+    <li><a href="#/">Search Games</a></li>
+    <li><a href="/#/newgame">Create Game</a></li>
+    <li><a href="/#/yourReviews">Your Reviews</a></li>
+    <li class="align-right"><a href="/#/logout">Logout</a></li>
+  </ul>
 	</nav>
 
 	<div ng-view>
@@ -23,6 +30,8 @@
 	<script src="app/app.js"></script>
 	<script src="app/factories/AuthFactory.js"></script>
 	<script src="app/factories/Boardgame.js"></script>
+	<script src="app/factories/ReviewFactory.js"></script>
+	<script src="app/factories/UserFactory.js"></script>
 	<script src="app/controllers/createGameCtrl.js"></script>
 	<script src="app/controllers/createReviewCtrl.js"></script>
 	<script src="app/controllers/loginCtrl.js"></script>
