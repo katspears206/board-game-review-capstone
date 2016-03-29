@@ -10,7 +10,20 @@
 		<h4>Number of players:{{ game.players }}</h4>
 		<button ng-click="showEditGame(game)">Edit Game</button>
 		<div ng-if="editGameVisible===true">
-			<div ng-include="partials/editgame.html"></div>
+			<section>
+				<h3>Name of game</h3>
+				<input type="text" autofocus="true" ng-model="game.name">
+
+				<h3>Description of game</h3>
+				<input type="text" ng-model="game.description">
+
+				<h3>Number of players for the game</h3>
+				<input type="text-box" ng-model="game.players">
+
+				<h3>Image URL of game</h3>
+				<input type="url" ng-model="game.image">
+				<button ng-click="editGame(game)">Save edits to game</button>
+			</section>	
 		</div>
 		<button ng-click="deleteGame(game)">Delete Game</button>
 		<textarea ng-model="game.review"></textarea>

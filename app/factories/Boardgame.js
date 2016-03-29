@@ -24,14 +24,21 @@ BoardGameReview.factory("boardGameFactory", function ($q, $http) {
 
 		editGame (game) {
 			console.log("game", game);
-			$http.put(`https://board-game-review.firebaseio.com/Boardgames/${game.id}.json`)
+			$http.put(`https://board-game-review.firebaseio.com/Boardgames/${game.id}.json`,
 
 				 JSON.stringify({
-          name: $scope.game.name,
-          description: $scope.game.description,
-          players: $scope.game.players,
-          image: $scope.game.image
+          name: game.name,
+          description: game.description,
+          players: game.players,
+          image: game.image
         })
+			).then
+			(function (response) {
+				console.log("success", response);
+			},
+			function (response) {
+				console.log("failure", response);
+			})
 		}
 
 	}
