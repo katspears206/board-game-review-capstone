@@ -1,6 +1,6 @@
 "use strict";
 
-BoardGameReview.controller("searchCtrl", [
+BoardGameReview.controller("yourReviews", [
 
   "$scope",
   "$location",

@@ -41,16 +41,7 @@ BoardGameReview.factory("reviewFactory", function ($q, $http, authFactory, board
         .then(function () {
         	$location.url("/")
         });
-		},
-
-		editReview (review) {
-			$http.put(`https://board-game-review.firebaseio.com/Reviews.json`)
-
-				 JSON.stringify({
-	          review : review,
-	          userID: user.uid,
-	          gameID: id
-	        })
 		}
+		
 	}
 });
