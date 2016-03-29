@@ -70,6 +70,7 @@ BoardGameReview.controller("searchCtrl", [
 
     $scope.editGame = function(game) {
       boardGameFactory.editGame(game);
+      return $scope.editGameVisible = false;
     },
 
     $scope.deleteGame = function (game) {
