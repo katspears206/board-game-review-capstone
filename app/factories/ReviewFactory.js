@@ -36,12 +36,11 @@ BoardGameReview.factory("reviewFactory", function ($q, $http, authFactory, board
     },
 
 		deleteReview (review) {
-			$http
-        .delete(`https://board-game-review.firebaseio.com/Reviews/${review.id}.json`)
-        .then(function () {
-        	$location.url("/")
-        });
+			$http.delete(`https://board-game-review.firebaseio.com/Reviews/${review.id}.json`)
+				.then(function ( ){
+					console.log("what is wrong?", review.id);
+				});
 		}
-		
+
 	}
 });

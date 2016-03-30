@@ -6,13 +6,30 @@ BoardGameReview.controller("yourReviewsCtrl", [
   "$location",
   "$http",
   "reviewFactory",
+  "authFactory",
 
-  function ($scope, $location, $http, reviewFactory) {
+  function ($scope, $location, $http, reviewFactory, authFactory) {
+
+  	let user = authFactory.getUser();
+  	$scope.yourReviews = [];
 
 
-  	$scope.yourReviews = function () {
-  		
-  	}
+
+		reviewFactory.getReviews()
+		.then(function (reviewCollection) {
+			Object.keys(reviewCollection).forEach(function (key) {
+				reviewCollection[key].id = key;
+				if( reviewCollection[key].userID === user.uid ){
+					$scope.yourReviews.push(reviewCollection[key]);
+				}
+			});
+		});
+  
+
+  	$scope.deleteReview = function (review){
+  		console.log("hopefully delete", review);
+  		reviewFactory.deleteReview(review);
+  	};
 
 
   }

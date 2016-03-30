@@ -41,11 +41,6 @@ BoardGameReview.config(["$routeProvider",
       	controller: "yourReviewsCtrl",
       	resolve: {isAuth}
       }).
-      // when("/editgame", {
-      // 	templateUrl: "partials/editGame.html",
-      // 	controller: "searchCtrl",
-      // 	resolve: {isAuth}
-      // }).
       otherwise({
       	redirectTo: "/"
       });
