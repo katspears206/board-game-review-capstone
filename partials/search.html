@@ -4,7 +4,6 @@
 	<button ng-click="searchGames()">Go!</button>
 
 	<section ng-repeat="game in foundGames">
-		<image>{{ game.image }}</image>
 		<h3>Name: {{ game.name }}</h3>
 		<h4>Description: {{ game.description }}</h4>
 		<h4>Number of players:{{ game.players }}</h4>
@@ -20,8 +19,6 @@
 				<h3>Number of players for the game</h3>
 				<input type="text-box" ng-model="game.players">
 
-				<h3>Image URL of game</h3>
-				<input type="url" ng-model="game.image">
 				<button ng-click="editGame(game)">Save edits to game</button>
 			</section>	
 		</div>

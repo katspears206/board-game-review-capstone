@@ -29,8 +29,7 @@ BoardGameReview.factory("boardGameFactory", function ($q, $http) {
 				 JSON.stringify({
           name: game.name,
           description: game.description,
-          players: game.players,
-          image: game.image
+          players: game.players
         })
 			).then
 			(function (response) {

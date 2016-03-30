@@ -12,8 +12,7 @@ BoardGameReview.controller("createGameCtrl",
     $scope.game = {
       name: "",
       description: "",
-      players: "",
-      image: ""
+      players: ""
     };
 
     // Function bound to the Add Song button in the view template
@@ -28,8 +27,7 @@ BoardGameReview.controller("createGameCtrl",
         JSON.stringify({
           name: $scope.game.name,
           description: $scope.game.description,
-          players: $scope.game.players,
-          image: $scope.game.image
+          players: $scope.game.players
         })
 
       // The $http.post() method returns a promise, so you can use then()
