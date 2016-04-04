@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Board Game Review</title>
-	<link rel="stylesheet" src="styles/main.css" href="">
+	<title>Gamer Review</title>
+	<link rel="stylesheet" src="styles/main.css" href="styles/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Lobster|Bangers|Abril+Fatface|Russo+One' rel='stylesheet' type='text/css'>
 </head>
 <body ng-app="BoardGameApp">
 
 	<nav>
-		<h1>Board Game Review</h1>
+		<h1 class="nav-header">Gamer Review</h1>
 
 		<ul>
     <li><a href="#/">Search Games</a></li>
@@ -17,7 +18,7 @@
   </ul>
 	</nav>
 
-	<div ng-view>
+	<div class="dat-view" ng-view>
 		
 	</div>
 
@@ -33,7 +34,6 @@
 	<script src="app/factories/ReviewFactory.js"></script>
 	<script src="app/factories/UserFactory.js"></script>
 	<script src="app/controllers/createGameCtrl.js"></script>
-	<script src="app/controllers/createReviewCtrl.js"></script>
 	<script src="app/controllers/loginCtrl.js"></script>
 	<script src="app/controllers/searchCtrl.js"></script>
 	<script src="app/controllers/yourReviewsCtrl.js"></script>
