@@ -6,9 +6,9 @@
 	</div>
 	<section class="search-results" ng-repeat="game in foundGames">
 		<h3>Name: {{ game.name }}</h3>
-		<h4>Description: {{ game.description }}</h4>
+		<h4 class="description">Description: {{ game.description }}</h4>
 		<h4>Number of players:{{ game.players }}</h4>
-		<button ng-click="showEditGame(game)">Edit Game</button>
+		<button class="editgamebtn" ng-click="showEditGame(game)">Edit Game</button>
 		<div class="edit-form" ng-if="editGameVisible===true">
 			<section>
 				<h3>Name of game</h3>
@@ -20,12 +20,12 @@
 				<h3>Number of players for the game</h3>
 				<input type="text-box" ng-model="game.players">
 
-				<button class="editgamebtn" ng-click="editGame(game)">Save edits to game</button>
+				<button class="saveeditgamebtn" ng-click="editGame(game)">Save edits to game</button>
 			</section>	
 		</div>
-		<button ng-click="deleteGame(game)">Delete Game</button>
-		<textarea ng-model="game.review"></textarea>
-		<button ng-click="addReview(game)">Add Review</button>
+		<button class="deletegamebtn" ng-click="deleteGame(game)">Delete Game</button>
+		<textarea class="datreview" ng-model="game.review"></textarea>
+		<button class="addreviewbtn" ng-click="addReview(game)">Add Review</button>
 		<section class="game-review" ng-repeat="review in game.reviews">{{review}}</section>
 	</section>
 </div>

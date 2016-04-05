@@ -5,10 +5,11 @@ BoardGameReview.controller("yourReviewsCtrl", [
   "$scope",
   "$location",
   "$http",
+  "$route",
   "reviewFactory",
   "authFactory",
 
-  function ($scope, $location, $http, reviewFactory, authFactory) {
+  function ($scope, $location, $http, $route, reviewFactory, authFactory) {
 
   	let user = authFactory.getUser();
   	$scope.yourReviews = [];
@@ -29,6 +30,7 @@ BoardGameReview.controller("yourReviewsCtrl", [
   	$scope.deleteReview = function (review){
   		console.log("hopefully delete", review);
   		reviewFactory.deleteReview(review);
+      $route.reload();
   	};
 
 

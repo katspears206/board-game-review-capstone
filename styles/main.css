@@ -20,6 +20,7 @@ nav {
 	padding: 0;
 	margin: 0;
 	background-color: #3F90AB;
+	border-radius: 0 20%;
 }
 nav ul{
 	text-align: right;
@@ -46,20 +47,45 @@ nav a:hover{
 	width: 100%;
 	text-align: center;
 }
-.search-page {
-
-}
 
 /*styling for game results on search page*/
-
-/*styling for edit form*/
-.edit-form {
-
+.search-results {
+	color: #5A2368;
+	background-color: #5AAB3F;
+	border: 5px solid #3F90AB;
+	width: 40%;
+	display: inline-block;
+	text-align: center;
+	margin: 2%;
+	min-height: 400px;
+	padding: 30px;
 }
-
+.editgamebtn,
+.deletegamebtn,
+.addreviewbtn,
+.saveeditgamebtn {
+	display: inline-block;
+	color: #5A2368;
+	background-color: #3F90AB;
+	border-radius: 10%;
+	margin: 10px 5px;
+}
+.editgamebtn:hover,
+.deletegamebtn:hover,
+.addreviewbtn:hover,
+.saveeditgamebtn:hover {
+	background-color: #99DCF2;
+}
+.datreview {
+	width: 60%;
+}
+.description {
+	word-wrap: break-word;
+}
 /*styling for reviews populated*/
 .game-review {
-
+	border: 0 3px;
+	border-color: #5A2368;
 }
 
 /*your reviews styling*/

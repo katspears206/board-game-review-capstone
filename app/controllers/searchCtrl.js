@@ -5,10 +5,11 @@ BoardGameReview.controller("searchCtrl", [
   "$scope",
   "$location",
   "$http",
+  "$route",
   "boardGameFactory",
   "reviewFactory",
 
-  function ($scope, $location, $http, boardGameFactory, reviewFactory) {
+  function ($scope, $location, $http, $route, boardGameFactory, reviewFactory) {
 
     $scope.searchstring = "";
     $scope.foundGames = [];
@@ -78,6 +79,7 @@ BoardGameReview.controller("searchCtrl", [
     $scope.deleteGame = function (game) {
       console.log("search ctrl game", game );
       boardGameFactory.deleteGame(game);
+      $route.reload();
     };
     // adds a review and saves the game id into the review firebase
     $scope.addReview = function (game) {
