@@ -1,0 +1,10 @@
+<div class="your-reviews">
+
+	<header><h2>Your Reviews</h2></header>
+
+	<section ng-repeat="review in yourReviews">
+		<h3>Review: {{ review.review }}</h3>
+		<button ng-click="deleteReview(review)">Delete Review</button>
+	</section>
+
+</div>

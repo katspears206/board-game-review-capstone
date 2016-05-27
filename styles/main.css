@@ -1,0 +1,108 @@
+/*general styling*/
+body {
+	/*#3F90AB*/
+	font-family: 'Russo One', sans-serif;
+	margin: 0;
+	padding: 0;
+}	
+.dat-view{
+	margin-left: 20px
+}
+/*nav styling*/
+.nav-header {
+	font-size: 50px;
+	display: block;
+	text-align: left;
+	margin: 0;
+	color: #5A2368;
+}
+nav {	
+	padding: 0;
+	margin: 0;
+	background-color: #3F90AB;
+	border-radius: 0 20%;
+}
+nav ul{
+	text-align: right;
+	padding: 10px;
+}
+nav li {
+	list-style: none;
+	display: inline-block;
+	border: 4px solid #5AAB3F;
+	border-radius: 10%;
+	padding: 10px;
+	margin: 0 5px;
+	background-color: #5AAB3F;
+}
+nav a:link { 
+	color: purple; 
+}
+nav a:hover{
+	color: #99DCF2;
+} 
+
+/*searchbar styling*/
+.searchbox{
+	width: 100%;
+	text-align: center;
+}
+
+/*styling for game results on search page*/
+.search-results {
+	color: #5A2368;
+	background-color: #5AAB3F;
+	border: 5px solid #3F90AB;
+	width: 40%;
+	display: inline-block;
+	text-align: center;
+	margin: 2%;
+	min-height: 400px;
+	padding: 30px;
+}
+.editgamebtn,
+.deletegamebtn,
+.addreviewbtn,
+.saveeditgamebtn {
+	display: inline-block;
+	color: #5A2368;
+	background-color: #3F90AB;
+	border-radius: 10%;
+	margin: 10px 5px;
+}
+.editgamebtn:hover,
+.deletegamebtn:hover,
+.addreviewbtn:hover,
+.saveeditgamebtn:hover {
+	background-color: #99DCF2;
+}
+.datreview {
+	width: 60%;
+}
+.description {
+	word-wrap: break-word;
+}
+/*styling for reviews populated*/
+.game-review {
+	border: 0 3px;
+	border-color: #5A2368;
+}
+
+/*your reviews styling*/
+.your-reviews {
+
+}
+
+/*login page styling*/
+.login {
+
+}
+
+/*create game styling*/
+.create-game-form {
+
+}
+
+.create-game-btn {
+
+}
