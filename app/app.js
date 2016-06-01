@@ -19,25 +19,25 @@ BoardGameReview.config(["$routeProvider",
 	function ($routeProvider) {
 		$routeProvider.
 			when("/", {
-				templateUrl: "partials/search.html",
+				templateUrl: "board-game-review-capstone/partials/search.html",
 				controller: "searchCtrl",
 				resolve: {isAuth}
 			}).
 			when("/login", {
-        templateUrl: "partials/login.html",
+        templateUrl: "board-game-review-capstone/partials/login.html",
         controller: "loginCtrl"
       }).
       when("/logout", {
-        templateUrl: "partials/login.html",
+        templateUrl: "board-game-review-capstone/partials/login.html",
         controller: "loginCtrl"
       }).
       when("/newgame", {
-      	templateUrl: "partials/createGame.html",
+      	templateUrl: "board-game-review-capstone/partials/createGame.html",
       	controller: "createGameCtrl",
       	resolve: {isAuth}
       }).
       when("/reviews", {
-      	templateUrl: "partials/yourReviews.html",
+      	templateUrl: "board-game-review-capstone/partials/yourReviews.html",
       	controller: "yourReviewsCtrl",
       	resolve: {isAuth}
       }).
