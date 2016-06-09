@@ -18,7 +18,7 @@ let isAuth =(authFactory) => new Promise((resolve, reject) => {
 BoardGameReview.config(["$routeProvider",
 	function ($routeProvider) {
 		$routeProvider.
-			when("/", {
+			when("board-game-review-capstone/", {
 				templateUrl: "board-game-review-capstone/partials/search.html",
 				controller: "searchCtrl",
 				resolve: {isAuth}
